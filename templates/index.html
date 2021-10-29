@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>Dictation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="text-success">Dictation System</h1>
+        <h5 class="text-muted">CDAC Mumbai</h5>
+    </div>
+    <hr>
+
+
+
+    <div class="container">
+
+        <div class="form-floating">
+            <select class="form-select" id="select_lang" aria-label="Floating label select example">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+            <label for="floatingSelect">Select the Language</label>
+        </div>
+
+        <br>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="asr_text"
+                style="height: 100px"></textarea>
+            <label for="floatingTextarea2">ASR Text </label>
+        </div>
+
+        <br>
+
+        <p id="status">Click on Start Recording.</p>
+
+
+
+        <div id="controls">
+            <button class="btn btn-primary" id="recordButton">
+                <i class="bi bi-record-circle"></i>
+                Record
+            </button>
+            <button class="btn btn-info" id="pauseButton" disabled>
+                <i class="bi bi-pause-circle"></i>
+                Pause
+            </button>
+            <button class="btn btn-danger" id="stopButton" disabled>
+                <i class="bi bi-stop-circle"></i>
+                Stop
+            </button>
+            <button id="upload-button" class="btn btn-outline-primary" onclick="processFile()"> Upload
+            </button>
+        </div>
+        <br>
+        <div>
+            <div class="form-group">
+                <input id="fileupload" type="file" name="fileupload" class="form-control-file" />
+                <br>
+              
+            </div>
+
+        </div>
+
+        <br>
+
+        <ul id="recordingsList" class="list-group"></ul>
+        <!-- <ol id="recordingsList"></ol> -->
+
+
+    </div>
+
+    <script type="text/javascript" src="static/js/app.js"></script>
+    <script src="static/js/RecordRTC.js"></script>
+    <script src="static/js/hark.js"></script>
+</body>
+
+
+</html>
