@@ -31,7 +31,7 @@ function capturemic(callback) {
     navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(function (mic) {
         callback(mic);
     }).catch(function (error) {
-        alert('Unable to capture your Recording. Please report to the developer');
+        alert('Unable to capture your Recording');
         console.error(error);
     });
 }

@@ -1,0 +1,18 @@
+.main{
+background-color:rgb(241, 241, 241); 
+padding: 3%; 
+border-radius: 25px
+}
+
+.head{
+    background-color:rgb(219, 233, 227);  
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+ }
